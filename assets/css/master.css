@@ -1,0 +1,13 @@
+p {
+	border: solid 5px #F4A860;
+	font-family: fantasy;
+	padding: 10px;
+	background-color: #FED7A3;
+}
+
+img{
+	border: 5px #000000 solid;
+	padding: 10px;
+	margin: 0 auto;
+	display: block;
+}
