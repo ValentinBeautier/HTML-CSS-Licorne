@@ -1,0 +1,47 @@
+// Variables
+@font-family: Tahoma;
+@color: #FED7A3;
+@root-size: 16px;
+@font-size: unit((18px / @root-size), em);
+@font-size-large: @font-size * 1.1;
+
+*, html, body {   
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font: @font-size/1.5em @font-family;
+	border: solid 5px #F4A860;
+	font-family: @font-family;
+	padding: 10px;
+	background-color: @color;
+    width: 50%;
+    margin: 0 auto;
+}
+
+img{
+	border: 5px @color solid;
+	padding: 10px;
+	display: block;
+    margin: 0 auto;
+}
+
+.wrapper{
+    margin: 0 auto;
+}
+
+.wrapper-mixin(@width: auto){
+    &:extend(.wrapper);
+    width: @width;
+}
+
+/* écrans moyen : 460px */
+@media screen and (min-width:50rem){
+    .wrapper{.wrapper-mixin(30rem);}
+}
+
+/* Grand écrans : 1024px */
+@media screen and (min-width:64rem){
+     .wrapper{.wrapper-mixin(64rem);}
+}
